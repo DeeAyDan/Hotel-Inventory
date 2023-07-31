@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
     <h1>Hello World</h1>
-    <hinv-rooms></hinv-rooms>
-</body>
-</html>
+    
+    <div [ngSwitch]="role">
+        <div *ngSwitchCase="'user'">
+          Wellcome User!
+        </div>
+        <div *ngSwitchCase="'admin'">
+          <hinv-rooms></hinv-rooms>
+        </div>
+        <div *ngSwitchDefault>
+          This is the default case!
+        </div>
+    </div>
+
