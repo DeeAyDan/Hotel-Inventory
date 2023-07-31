@@ -13,7 +13,7 @@
 
 <div *ngIf="rooms.availableRooms > 0">
   Rooms List
-  <table>
+  <table class="table">
     <tr>
       <th>Index</th>
       <th>Even/Odd</th>
@@ -35,7 +35,7 @@
       <td>{{ room.price | currency : "EUR" }}</td>
       <td>{{ room.amenities | titlecase }}</td>
       <td>{{ room.checkinTime | date : "short" }}</td>
-      <td>{{room.rating | number : "1.0-1" : "en-us"}}</td>
+      <td>{{room.rating | number : "1.0-1" : ""}}</td>
     </tr>
   </table>
 </div>
