@@ -12,7 +12,7 @@ export class RoomsComponent {
 
   rooms: Room = {
     totalRooms: 20,
-    avaiableRooms: 10,
+    availableRooms: 10,
     bookedRooms: 5, 
   };
 
@@ -24,6 +24,7 @@ export class RoomsComponent {
     photos : 'Placeholder for photo',
     checkinTime : new Date('14-Aug-2023'),
     checkoutTime : new Date('18-Aug-2023'),
+    rating : 4.5,
   },
   {
     roomNumber : 2,
@@ -33,6 +34,8 @@ export class RoomsComponent {
     photos : 'Placeholder for photo',
     checkinTime : new Date('16-Aug-2023'),
     checkoutTime : new Date('20-Aug-2023'),
+    rating : 3.4,
+
   },
   {
     roomNumber : 3,
@@ -42,12 +45,13 @@ export class RoomsComponent {
     photos : 'Placeholder for photo',
     checkinTime : new Date('21-Aug-2023'),
     checkoutTime : new Date('23-Aug-2023'),
+    rating : 2.6,
   }
 
 ]
 
   hotelName = "Hilton Hotel";
-  numberOfRooms = this.rooms.totalRooms;
+  numberOfRooms = this.rooms.availableRooms;
   toggle(){
     this.hideRooms = !this.hideRooms;
   }
