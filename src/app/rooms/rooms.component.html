@@ -1,11 +1,14 @@
 <h1>Wellcome to {{hotelName}}</h1>
 <div [hidden]="hideRooms">
     Number of rooms:
-    <div [innerText]="numberOfRooms"></div>
+    <div [ngStyle]="{color : rooms.avaiableRooms ? 'green' : 'red'}" [innerText]="numberOfRooms">
+
+    </div>
 </div>
 <button (click)="toggle()">Toggle</button>
 
 <div *ngIf="rooms?.avaiableRooms">
+    Rooms List
     <table>
         <tr>
             <th>Index</th>
